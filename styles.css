@@ -79,7 +79,7 @@
     height: 587.15px;
     left: 0;
     background-color: #fff;
-    top: 11.5%;
+    top: 14.5%;
     background-image: url("images/header-shapes\ mobile.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -516,11 +516,6 @@
     color: #6070ff;
   }
 
-  .action {
-    width: 295px;
-    height: 2px;
-  }
-
   .see-project {
     box-sizing: border-box;
     display: flex;
@@ -528,27 +523,33 @@
     align-items: center;
     padding: 12px;
     gap: 0;
+    position: relative;
+    top: 83%;
     width: 130px;
     height: 48px;
-    left: 14.5%;
+    left: 1.8%;
     border: 1px solid #6070ff;
     border-radius: 8px;
     background-color: #fff;
-    margin-top: 240px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #396df2;
   }
 
-  .action :hover {
-    background-color: #6070ff;
-    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
-    border-radius: 8px;
+  .see-project:hover {
+    background-color: #7f8cff;
+    color: white;
   }
 
-  .action :active {
+  .see-project:active {
     background: #2230d2;
-  }
-
-  .action:disabled {
-    background: #e5e5e5;
+    color: white;
   }
 
   .see-project-l {
@@ -565,21 +566,25 @@
     border-radius: 8px;
     background-color: #fff;
     margin-top: 280px;
-  }
-
-  .see-p {
-    width: 130px;
-    height: 24px;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
     text-align: center;
     letter-spacing: 0.03em;
     color: #396df2;
+    cursor: pointer;
+  }
+
+  .see-project-l:hover {
+    background-color: #7f8cff;
+    color: white;
+  }
+
+  .see-project-l:active {
+    background: #2230d2;
+    color: white;
   }
 
   .about-myself {
@@ -698,35 +703,25 @@
     border: 1px solid #6070ff;
     border-radius: 8px;
     background-color: #fff;
-  }
-
-  .resume:hover {
-    background-color: #6070ff;
-    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
-    border-radius: 8px;
-  }
-
-  .resume :active {
-    background: #2230d2;
-  }
-
-  .resume:disabled {
-    background: #e5e5e5;
-  }
-
-  .see-resume {
-    width: 200px;
-    height: 24px;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
     text-align: center;
     letter-spacing: 0.03em;
     color: #396df2;
+    cursor: pointer;
+  }
+
+  .resume:hover {
+    background-color: #7f8cff;
+    color: white;
+  }
+
+  .resume:active {
+    background: #2230d2;
+    color: white;
   }
 
   .skill-list {
