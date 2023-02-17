@@ -17,9 +17,9 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [Portfolio: setup and mobile first <a name="about-project"></a>
+# 📖 [Portfolio: finish mobile version <a name="about-project"></a>
 
-**[Portfolio: setup and mobile first]** is a project that shows you how to create your portfolio in Mobile version.
+**[Portfolio: finish mobile version]** is a project that shows you how to create your portfolio in Mobile version.
 
 
 You will learn how to use CSS Flexbox layout to place elements in a HTML page.
