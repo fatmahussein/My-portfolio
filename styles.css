@@ -434,11 +434,11 @@
   }
 
   .tags {
-    /* display: flex;
-    flex-direction: row;
-    align-items: center; */
+     display: flex;
+    flex-direction: row; 
+    align-items: center; 
     padding: 0;
-    gap: 8px;
+    gap: 10px;
     width: 203px;
     height: 24px;
     float: left;
@@ -457,6 +457,7 @@
     height: 24px;
     background: #ebebff;
     border-radius: 8px;
+    float: left;
   }
 
   .tag2 {
@@ -468,17 +469,21 @@
     height: 24px;
     background: #ebebff;
     border-radius: 8px;
+    float: none;
+ 
   }
 
   .tag3 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 4px 12px;
-    width: 89px;
+    padding: 4px 0px;
+    width: 82px;
     height: 24px;
     background: #ebebff;
     border-radius: 8px;
+    float: right;
+    
   }
 
   .html {
