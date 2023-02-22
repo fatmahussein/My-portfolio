@@ -204,9 +204,10 @@
     list-style: none;
   }
 
-  .works {
+  .grid-container {
     display: grid;
-    flex-direction: column;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     align-items: center;
     justify-content: center;
     gap: 8px;
@@ -216,57 +217,16 @@
     margin-left: -10px;
   }
 
-  .card-works1 {
+  .card{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
+    padding: 15px 16px 55px;
     gap: 12px;
     width: 327px;
-    height: 552px;
-    background: #fff;
-    border: 1px solid #dfe1e6;
-    border-radius: 16px;
-  }
-
-  .card-works2 {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-    gap: 12px;
-    width: 327px;
-    height: 596px;
-    background: #fff;
-    border: 1px solid #dfe1e6;
-    border-radius: 16px;
-  }
-
-  .card-works3 {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-    gap: 12px;
-    width: 327px;
-    height: 552px;
-    background: #fff;
-    border: 1px solid #dfe1e6;
-    border-radius: 16px;
-  }
-
-  .card-works4 {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-    gap: 12px;
-    width: 327px;
-    height: 596px;
+    /* height: 552px; */
+    height: auto;
     background: #fff;
     border: 1px solid #dfe1e6;
     border-radius: 16px;
@@ -524,7 +484,7 @@
     padding: 12px;
     gap: 0;
     position: relative;
-    top: 83%;
+    top:95%;
     width: 130px;
     height: 48px;
     left: 1.8%;
@@ -1166,7 +1126,7 @@
     width: 259px;
     height: 40px;
     right: 8px;
-    top: -10px;
+    top: -20px;
   }
 
   #headline {
@@ -1187,7 +1147,7 @@
     width: 100px;
     height: 40px;
     left: 143px;
-    top: -10px;
+    top: -20px;
   }
 
   .primary-text1 {
@@ -1225,6 +1185,7 @@
   }
 
   .primary-text2 {
+    display: flex;
     width: 727px;
     height: 146px;
     font-family: 'Poppins', sans-serif;
@@ -1284,5 +1245,26 @@
     left: 48%;
     right: 48.22%;
     top: 50.15%;
+  }
+  .card{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 16px 55px;
+    gap: 12px;
+    width: 856px;
+    height: 552px;
+     background: #fff;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+  }
+  .snap{
+    width: 325px;
+    height: 220px;
+    /* background: url('images/Snapshoot\ 1.png'); */
+    border-radius: 8px;
+    background-repeat:no-repeat;
+    margin: 10px;
   }
 }
