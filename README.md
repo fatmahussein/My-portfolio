@@ -11,15 +11,16 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 -- [🙏 Acknowledgements](#acknowledgements)
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [Portfolio: add a contact form and finish the mobile version <a name="about-project"></a>
+# 📖 [Portfolio: desktop version <a name="about-project"></a>
 
-**[Portfolio: add a contact form and finish the mobile version]** is a project that shows you how to create your portfolio in Mobile version.
+**[Portfolio: desktop version]** is a project that shows you how to create your portfolio in mobile and desktop version.
 
 
 You will learn how to use CSS Flexbox layout to place elements in a HTML page.
@@ -105,6 +106,9 @@ To learn more on flexbox please click on this link https://developer.mozilla.org
 - Twitter: [@FatmaHussein200](https://twitter.com/FatmaHussein200)
 - LinkedIn: [Fatma Hussein](https://www.linkedin.com/in/fatuma-hussein-48149917b/)
 
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[Pop-up window]**
 
 ## 🤝 Contributing <a name="contributing"></a>
 
