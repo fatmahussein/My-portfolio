@@ -11,16 +11,15 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 -- [🙏 Acknowledgements](#acknowledgements)
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [Portfolio: desktop version <a name="about-project"></a>
+# 📖 [Portfolio: finish mobile version <a name="about-project"></a>
 
-**[Portfolio: desktop version]** is a project that shows you how to create your portfolio in mobile and desktop version.
+**[Portfolio: finish mobile version]** is a project that shows you how to create your portfolio in Mobile version.
 
 
 You will learn how to use CSS Flexbox layout to place elements in a HTML page.
@@ -46,7 +45,6 @@ HTML5 and CSS3
 
 
 - **Use FlexBox**
-- **Create forms with HTML5 validations**
 - **Follow HTML and CSS best practices**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -77,19 +75,6 @@ Clone this repository to your desired folder:
   cd my-folder
   git clone[ (https://github.com/fatmahussein/My-portfolio.git)]
 ```
-## Create forms with HTML5 validations
-The HTML <form> element is used to create an HTML form for user input:
-
-```sh
-<form>
-.
-form elements
-.
-</form>
-```
-The <form> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.
-To learn more on the form, please click on this link:https://www.w3schools.com/html/html_forms.asp
-
 ## Flex Box Module
 Flex box was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities.
 
@@ -106,9 +91,6 @@ To learn more on flexbox please click on this link https://developer.mozilla.org
 - Twitter: [@FatmaHussein200](https://twitter.com/FatmaHussein200)
 - LinkedIn: [Fatma Hussein](https://www.linkedin.com/in/fatuma-hussein-48149917b/)
 
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **[Pop-up window]**
 
 ## 🤝 Contributing <a name="contributing"></a>
 
