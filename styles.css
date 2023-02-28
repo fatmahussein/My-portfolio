@@ -564,6 +564,15 @@
     padding-bottom: 45%;
   }
 
+  .hr { 
+    height: 1px;
+    background-color: #dfe1e6;
+    width: 83%;
+    margin-left: 27px
+  }
+;
+    
+  }
   .top {
     display: flex;
     flex-direction: column;
