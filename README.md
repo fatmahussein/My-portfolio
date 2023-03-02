@@ -17,9 +17,9 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [Portfolio: finish mobile version <a name="about-project"></a>
+# 📖 [Portfolio: Desktop version <a name="about-project"></a>
 
-**[Portfolio: finish mobile version]** is a project that shows you how to create your portfolio in Mobile version.
+**[Portfolio: Desktop version]** is a project that shows you how to create your portfolio in Desktop version.
 
 
 You will learn how to use CSS Flexbox layout to place elements in a HTML page.
@@ -45,6 +45,7 @@ HTML5 and CSS3
 
 
 - **Use FlexBox**
+- **Use Grid Layout**
 - **Follow HTML and CSS best practices**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
