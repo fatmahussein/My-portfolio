@@ -554,7 +554,7 @@
     color: white;
   }
 
-  .about-myself {
+  #about-myself {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1307,14 +1307,14 @@
     display: none;
   }
 
-  .about-myself {
+  #about-myself {
     flex-direction: row;
     padding-bottom: 20%;
   }
 
   .top {
     width: 33%;
-    margin-left: 4%;
+    margin-left: 8%;
   }
 
   .frame-8 {
@@ -1356,6 +1356,7 @@
     display: flex;
     flex-direction: column;
     width: 61%;
+    margin-right: 10%;
   }
 
   .skill-list {
