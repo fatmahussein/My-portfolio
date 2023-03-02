@@ -1312,9 +1312,16 @@
     padding-bottom: 20%;
   }
 
+  .about-myself-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding-top: 6%;
+  }
+
   .top {
     width: 33%;
-    margin-left: 8%;
   }
 
   .frame-8 {
@@ -1356,7 +1363,6 @@
     display: flex;
     flex-direction: column;
     width: 61%;
-    margin-right: 10%;
   }
 
   .skill-list {
