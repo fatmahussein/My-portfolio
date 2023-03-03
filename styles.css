@@ -1649,10 +1649,16 @@
   #faceb {
     display: flex;
   }
+<<<<<<< HEAD
 
   @keyframes slideTop {
     0%{
       transform: translateY(100px);
+=======
+  @keyframes slideText {
+    0%{
+      transform: translateY(-100px);
+>>>>>>> 40b8a007b1bf1febdf989a318e39452eeb60df4a
       opacity: 0;
     }
     100%{
@@ -1660,5 +1666,8 @@
       opacity: 1;
     }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 40b8a007b1bf1febdf989a318e39452eeb60df4a
 }
