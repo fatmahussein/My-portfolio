@@ -1,25 +1,28 @@
 <a name="readme-top"></a>
 
 # 📗 Table of Contents
-
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-      - [🚀 Live Demo](#live-demo)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
--- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
+# 📖 [Portfolio: Desktop version <a name="about-project"></a>
 
-# 📖 [Portfolio: finish mobile version <a name="about-project"></a>
-
-**[Portfolio: finish mobile version]** is a project that shows you how to create your portfolio in Mobile version.
+**[Portfolio: Desktop version]** is a project that shows you how to create your portfolio in Desktop version.
 
 
 You will learn how to use CSS Flexbox layout to place elements in a HTML page.
@@ -45,7 +48,16 @@ HTML5 and CSS3
 
 
 - **Use FlexBox**
+- **Use Grid Layout**
 - **Follow HTML and CSS best practices**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Add a link to your deployed project.
+
+- [Live Demo Link](https://google.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -75,10 +87,56 @@ Clone this repository to your desired folder:
   cd my-folder
   git clone[ (https://github.com/fatmahussein/My-portfolio.git)]
 ```
-## Flex Box Module
-Flex box was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities.
 
-To learn more on flexbox please click on this link https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox 
+
+### Install
+
+Install this project with:
+
+<!--
+Example command:
+
+```sh
+  cd my-project
+  gem install
+```
+--->
+
+### Usage
+
+To run the project, execute the following command:
+
+<!--
+Example command:
+
+```sh
+  rails server
+```
+--->
+
+### Run tests
+
+To run tests, run the following command:
+
+<!--
+Example command:
+
+```sh
+  bin/rails test test/models/article_test.rb
+```
+--->
+
+### Deployment
+
+You can deploy this project using:
+
+<!--
+Example:
+
+```sh
+
+```
+ -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,7 +149,12 @@ To learn more on flexbox please click on this link https://developer.mozilla.org
 - Twitter: [@FatmaHussein200](https://twitter.com/FatmaHussein200)
 - LinkedIn: [Fatma Hussein](https://www.linkedin.com/in/fatuma-hussein-48149917b/)
 
+## 🔭 Future Features <a name="future-features"></a>
 
+- [ ] **[Pop-up window]**
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 ## 🤝 Contributing <a name="contributing"></a>
 
 <!-- CONTRIBUTING -->
@@ -112,9 +175,6 @@ You can send a simple "thank you" message to the comment section.
 ## 🙏 Acknowledgments <a name="Microverse Inc."></a>
 
 I would like to thank Microverse team for guiding us through this project.
-
-I would also like to thank Sohail and Ismail for the good collaboration that we had in successfully completing this project.
-
 
 <!-- FAQ (optional) -->
 
