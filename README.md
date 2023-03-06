@@ -55,7 +55,7 @@ HTML5 and CSS3
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [https://fatmahussein.github.io/My-portfolio/]
+- []
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
