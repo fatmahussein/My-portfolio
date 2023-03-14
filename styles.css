@@ -61,11 +61,15 @@
   }
 
   .hamburger {
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: flex-start;
     padding: 12px;
     padding-right: 40px;
+  }
+
+  .nav-item {
+    margin: 10px 0;
   }
 
   #desk3 {
@@ -78,12 +82,26 @@
 
   .bar {
     display: block;
-    width: 30px;
+    width: 25px;
     height: 3px;
-    margin: 3px auto;
+    margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: #6070ff;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: white;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: white;
   }
 
   #headline {
@@ -1022,8 +1040,36 @@
     color: white;
   }
 
-  .nav-list {
-    display: none;
+  .nav-menu {
+    margin: 0;
+    position: fixed;
+    left: -170%;
+    top: -20px;
+    padding-top: 27%;
+    padding-right: 60%;
+    flex-direction: column;
+    background-color: #1524aec3;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu.active .nav-link {
+    color: #fff;
   }
 }
 
@@ -1050,10 +1096,30 @@
     display: none;
   }
 
-  .nav-list {
+  .nav-menu {
+    position: relative;
     display: flex;
+    padding: 0;
+    top: -46%;
     flex-direction: row;
-    gap: 12px;
+    left: 0;
+    backdrop-filter: blur(0);
+    padding-top: 5%;
+    background-color: transparent;
+    text-align: center;
+    transition: 0.3s;
+    gap: 5%;
+    color: #344563;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 44px;
+    align-items: center;
+  }
+
+  .nav-link {
+    display: flex;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -1061,12 +1127,10 @@
     line-height: 20px;
     align-items: center;
     text-align: center;
-    color: #344563;
-    padding: 0;
-    width: 13%;
+    transition: 0.7s ease;
   }
 
-  .nav-list a {
+  .nav-link a {
     display: inline-block;
     animation: slideTop  0.5s ease forwards;
     animation-delay: calc(0.5s * var(--i));
