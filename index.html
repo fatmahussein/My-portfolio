@@ -8,7 +8,7 @@
     <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap' rel='stylesheet' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Portfolio</title>
+    <title>Fatuma's Portfolio</title>
 
 </head>
 
@@ -20,17 +20,30 @@
                 <div class="logo-placeholder">
                     <a class="navbar-brand" href="#">Fatuma</a>
                 </div>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                <ul class="nav-menu" >
+                    <li class="nav-item">
+                      <a class="nav-link"  href="#work" style="--i:1;">Portfolio</a>
+                    </li>
+                    <li class="nav-item" >
+                      <a class="nav-link" href="#about-myself" style="--i:2;">About &nbsp;&nbsp;</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"  href="#contact" style="--i:3;">Contact</a>
+                    </li>          
+                  </ul>
                 </div>
-                <ul class="nav-list">
-                    <li><a href="#work" style="--i:1;" >Portfolio</a></li>
-                    <li><a href="#about-myself" style="--i:2;">About</a></li>
-                    <li><a href="#contact"  style="--i:3;" >Contact</a></li>
+  
+               <div class="hamburger"> 
+               <span class="bar"></span>
+               <span class="bar"></span>
+               <span class="bar"></span>
+              </div> 
+                <!-- <ul class="nav-list">
+                    <li class="nav-item"><a href="#work" style="--i:1;" >Portfolio</a></li>
+                    <li class="nav-item"><a href="#about-myself" style="--i:2;">About</a></li>
+                    <li class="nav-item"><a href="#contact"  style="--i:3;" >Contact</a></li>
 
-                </ul>
+                </ul> -->
             </div>
         </nav>
     </header>
@@ -51,11 +64,11 @@
         </div>
         <div class="socialmedia-icons">
             <ul class="icons">
-                <li><a href="#"><img class="twitter" src="images/twitter.png"></a></li>
-                <li><a href="#"><img class="linkedin" src="images/Linkedin icon.png"></a></li>
-                <li><a href="#"><img class="m" src="images/m.png"></a></li>
-                <li><a href="#"><img class="github" src="images/github.png"></a></li>
-                <li><a href="#"><img class="vector" src="images/Vector.png"></a></li>
+                <li><a href="#"><img class="twitter" alt="twitter" src="images/twitter.png"></a></li>
+                <li><a href="#"><img class="linkedin" alt="linkedin" src="images/Linkedin icon.png"></a></li>
+                <li><a href="#"><img class="m" alt="medium" src="images/m.png"></a></li>
+                <li><a href="#"><img class="github" alt="github" src="images/github.png"></a></li>
+                <li><a href="#"><img class="vector" alt="Angellist" src="images/Vector.png"></a></li>
             </ul>
         </div>
 
@@ -67,22 +80,22 @@
         <div class="grid-container">
             <div class="card">
                 <div class="snap1"></div>
-                <img id="desk" src="images/Desksnap.png" alt="">
+                <img id="desk" src="images/Desksnap.png" alt="Canopy project image">
 
                 <div class="left-block">
                     <div class="pt">
                         <h2>Tonic</h2>
                         <ul class="frame2">
                             <li class="client">
-                                <h5 class="canopy">CANOPY</h5>
+                                <h3 class="canopy">CANOPY</h3>
                             </li>
                             <li class="dot"></li>
                             <li class="role">
-                                <h5 class="Back">Back End Dev</h5>
+                                <h3 class="Back">Back End Dev</h3>
                             </li>
                             <li class="dot"></li>
                             <li class="year-label">
-                                <h5 class="year">2015</h5>
+                                <h3 class="year">2015</h3>
                             </li>
                         </ul>
                         <p class="pry-text">A daily selection of privately personalized reads; no accounts or sign-ups
@@ -117,23 +130,23 @@
             </div>
             <div class="card">
                 <div class="snap2"></div>
-                <img id="desk2" src="images/Desksnap2.png" alt="">
+                <img id="desk2" src="images/Desksnap2.png" alt="Multi-Post project image">
                 <div class="left-block">
                     <div class="pt">
                         <h2 id="multipost">Multi-Post<br id="br">
                             Stories</h2>
                         <ul class="frame2-l">
                             <li class="client">
-                                <h5 class="canopy-l">CANOPY</h5>
-                                <h5 class="fb">FACEBOOK</h5>
+                                <h3 class="canopy-l">CANOPY</h3>
+                                <h3 class="fb">FACEBOOK</h3>
                             </li>
                             <li class="dot"></li>
                             <li class="role1">
-                                <h5 class="Back">Back End Dev</h5>
+                                <h3 class="Back">Back End Dev</h3>
                             </li>
                             <li class="dot"></li>
                             <li class="year-label">
-                                <h5 class="year">2015</h5>
+                                <h3 class="year">2015</h3>
                             </li>
                         </ul>
                         <p class="pry-text">Experimental content creation feature that allows users to add to an
@@ -190,24 +203,24 @@
             </div>
             <div class="card">
                 <div class="snap3"></div>
-                <img id="desk3" src="images/Snapshoot 1.png" alt="">
+                <img id="desk3" src="images/Snapshoot 1.png" alt="Tonic Project Image">
                 <div class="left-block">
                     <div class="pt">
                         <h2 id="ton">Tonic</h2>
                         <h2 id="faceb">Facebook 360</h2>
                         <ul class="frame2">
                             <li class="client">
-                                <h5 id="can" class="canopy">CANOPY</h5>
-                                <h5 id="book" class="canopy">Facebook</h5>
+                                <h3 id="can" class="canopy">CANOPY</h3>
+                                <h3 id="book" class="canopy">Facebook</h3>
                             </li>
                             <li class="dot"></li>
                             <li class="role1">
-                                <h5 id="end" class="Back">Back End Dev</h5>
-                                <h5  id="fs" class="full">Full Stack Dev</h5>
+                                <h3 id="end" class="Back">Back End Dev</h3>
+                                <h3  id="fs" class="full">Full Stack Dev</h3>
                             </li>
                             <li class="dot"></li>
                             <li class="year-label">
-                                <h5 class="year">2015</h5>
+                                <h3 class="year">2015</h3>
                             </li>
                         </ul>
                         <p class="pry-text">Exploring the future of media in Facebook's first Virtual Reality app; a
@@ -271,16 +284,16 @@
 
                         <ul class="frame2-l">
                             <li class="client">
-                                <h5 class="canopy">CANOPY</h5>
+                                <h3 class="canopy">CANOPY</h3>
 
                             </li>
                             <li class="dot"></li>
                             <li class="role">
-                                <h5 class="Back">Back End Dev</h5>
+                                <h3 class="Back">Back End Dev</h3>
                             </li>
                             <li class="dot"></li>
                             <li class="year-label">
-                                <h5 class="year">2015</h5>
+                                <h3 class="year">2015</h3>
                             </li>
                         </ul>
                         <p class="pry-text">A daily selection of privately personalized reads; no accounts or sign-ups
@@ -313,21 +326,21 @@
                 </div>
             </div>
             <div id="threesixty" class="card">
-                                <img id="desk4" src="images/Snapshoot 2.png" alt="">
+                                <img id="desk4" src="images/Snapshoot 2.png" alt="Uber project Image">
                 <div class="left-block">
                     <div class="pt">
                         <h2 >Uber Navigation</h2>
                         <ul class="frame2-l">
                             <li class="client">
-                                <h5 class="canopy">Uber</h5>
+                                <h3 class="canopy">Uber</h3>
                             </li>
                             <li class="dot"></li>
                             <li class="role1">
-                                <h5 class="full">Lead Developer</h5>
+                                <h3 class="full">Lead Developer</h3>
                             </li>
                             <li class="dot"></li>
                             <li class="year-label">
-                                <h5 class="year">2018</h5>
+                                <h3 class="year">2018</h3>
                             </li>
                         </ul>
                         <p class="pry-text">A daily selection of privately personalized reads; no accounts or sign-ups
@@ -374,11 +387,11 @@
             </div>
 
             <ul class="frame1">
-                <li><a href="#"><img class="github2" src="images/github.png"></a></li>
-                <li><a href="#"><img class="linkedin2" src="images/Linkedin icon.png"></a></li>
-                <li><a href="#"><img class="vector2" src="images/Vector.png"></a></li>
-                <li><a href="#"><img class="twitter2" src="images/twitter.png"></a></li>
-                <li><a href="#"><img class="m2" src="images/m.png"></a></li>
+                <li><a href="#"><img class="github2" alt="github" src="images/github.png"></a></li>
+                <li><a href="#"><img class="linkedin2" alt="linkedin" src="images/Linkedin icon.png"></a></li>
+                <li><a href="#"><img class="vector2" alt="Angellist" src="images/Vector.png"></a></li>
+                <li><a href="#"><img class="twitter2" alt="twitter" src="images/twitter.png"></a></li>
+                <li><a href="#"><img class="m2" alt="medium" src="images/m.png"></a></li>
             </ul>
 
             <button type="button" class="resume">
@@ -398,19 +411,19 @@
             <div class="language-list">
                 <ul class="frame9">
                     <li class="js-ellipse">
-                        <a href="#"><img src="images/js.png"></a>
+                        <a href="#"><img src="images/js.png" alt="javaScript icon"></a>
                     </li>
                     <li class="script">JavaSript</li>
                 </ul>
                 <ul class="frame10">
                     <li class="html-ellipse">
-                        <a href="#"><img src="images/html.png"></a>
+                        <a href="#"><img src="images/html.png" alt="html icon"></a>
                     </li>
                     <li class="script2">HTML</li>
                 </ul>
                 <ul class="frame11">
                     <li class="css-ellipse">
-                        <a href="#"><img src="images/css.png"></a>
+                        <a href="#"><img src="images/css.png" alt="css icon"></a>
                     </li>
                     <li class="script3">CSS</li>
                 </ul>
@@ -437,15 +450,17 @@
         <p class="contact-p">If you have an application you are interested in developing, a feature that you need built
             or a project that needs coding. I’d love to help with it </p>
 
-        <form action="https://formspree.io/f/mdojqvjo" method="POST">
+        <form action="https://formspree.io/f/mdojqvjo" method="POST" id="register">
             <input type="text" maxlength="30" id="name" placeholder="Yeremias" name="name" required>
             <input type="email" id="email" placeholder="natajayanj14@gmail.com" name="email" required>
+            <span class="error-message">Message  not sent!  Please,  use lower case letters for your email address</span>
             <textarea type="message" maxlength="500" id="msg" placeholder="Write your message here" name="message"
                 required></textarea>
             <button type="submit" id="submit">Get in touch</button>
         </form>
     </div>
     </section>
+    <script src="index.js"></script>
 </body>
 
 </html>
