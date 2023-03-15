@@ -23,3 +23,26 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
   }
 });
+
+// storing data in local storage
+
+const fullName = document.querySelector('#name');
+const feedback = document.querySelector('#msg');
+
+function visitorData() {
+  const visitor = {
+    Name: fullName.value,
+    Email: email.value,
+    Message: feedback.value,
+  };
+  localStorage.setItem('visitor', JSON.stringify(visitor));
+}
+
+[fullName, email, feedback].forEach((input) => input.addEventListener('focusout', visitorData));
+// retrieve data from local storage
+const visitorDataExist = JSON.parse(localStorage.getItem('visitor'));
+if (visitorDataExist) {
+  fullName.value = visitorDataExist.Name;
+  email.value = visitorDataExist.Email;
+  feedback.value = visitorDataExist.Message;
+}
