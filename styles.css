@@ -231,24 +231,13 @@
     border-radius: 16px;
   }
 
-  .snap1 {
-    width: 295px;
-    height: 220px;
-    background: url('images/Snapshoot\ 1.png');
-    border-radius: 8px;
-  }
 
-  .snap2 {
-    width: 295px;
-    height: 220px;
-    background: url('images/Snapshoot\ 2.png');
-    border-radius: 8px;
-  }
 
-  .snap3 {
+
+  .snap {
     width: 295px;
     height: 220px;
-    background: url('images/Snapshoot\ 3.png');
+   
     border-radius: 8px;
   }
 
@@ -260,12 +249,7 @@
     display: none;
   }
 
-  .snap4 {
-    width: 295px;
-    height: 220px;
-    background: url('images/Snapshoot\ 4.png');
-    border-radius: 8px;
-  }
+ 
 
   .left-block {
     display: flex;
@@ -1343,17 +1327,9 @@
     display: none;
   }
 
-  #desk2 {
-    display: block;
-    width: 50%;
-    height: 112%;
-    justify-content: center;
-    border-radius: 8px;
-    margin-bottom: -37px;
-    order: 1;
-  }
 
-  #desk3 {
+
+  .desk {
     display: block;
     width: 50%;
     height: 112%;
@@ -1361,7 +1337,9 @@
     border-radius: 8px;
     margin-bottom: -37px;
   }
-
+.snap{
+  display:none;
+}
   #desk4 {
     display: block;
     width: 50%;
