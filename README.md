@@ -147,6 +147,12 @@ Example:
 - Twitter: [@FatmaHussein200](https://twitter.com/FatmaHussein200)
 - LinkedIn: [Fatma Hussein](https://www.linkedin.com/in/fatuma-hussein-48149917b/)
 
+👤 **Francis Njoroge**
+
+- GitHub: [francis450](https://github.com/fatmahussein)
+- Twitter: [@nkamandefrancis](https://twitter.com/FatmaHussein200)
+- LinkedIn: [https://www.linkedin.com/in/njoroge-francis](https://www.linkedin.com/in/fatuma-hussein-48149917b/)
+
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Pop-up window]**
