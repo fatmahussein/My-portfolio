@@ -1059,7 +1059,6 @@
     color: #fff;
   }
 
-
   .main-pop {
     width: 100%;
     height: 100%;
@@ -1179,7 +1178,8 @@
     font-size: 32px;
     line-height: 44px;
     color: #172b4d;
-    }
+  }
+
   .error-message {
     visibility: hidden;
     position: absolute;
@@ -1847,7 +1847,6 @@
     }
   }
 
-
   #facebook {
     display: flex;
   }
@@ -2049,5 +2048,4 @@
   .error-message {
     width: 100%;
   }
-
 }
