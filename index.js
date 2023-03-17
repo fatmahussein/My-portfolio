@@ -1,5 +1,7 @@
+/* eslint-disable linebreak-style */
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
+// eslint-disable-next-line linebreak-style
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
@@ -20,10 +22,11 @@ const projects = [
     Mobimage: 'images/Snapshoot 1.png',
     Desktimage: 'images/Desksnap.png',
     technologies: ['html', 'css', 'javascript'],
-    live: 'https://fatmahussein.github.io/portfolio/',
-    source: 'https://fatmahussein.github.io/portfolio/',
+    live: 'https://fatmahussein.github.io/My-portfolio/',
+    source: 'https://github.com/fatmahussein/My-portfolio',
     company: 'CANOPY',
     id: '1',
+
   },
   {
     name: 'Multi-Post Stories',
@@ -31,10 +34,9 @@ const projects = [
     Desktimage: 'images/Desksnap2.png',
     Mobimage: 'images/Snapshoot 2.png',
     technologies: ['html', 'css', 'javascript'],
-    live: 'https://fatmahussein.github.io/portfolio/',
-    source: 'https://github.com/fatmahussein/portfolio',
+    live: 'https://fatmahussein.github.io/My-portfolio/',
+    source: 'https://github.com/fatmahussein/My-portfolio',
     company: 'FACEBOOK',
-    id: '2',
   },
 
   {
@@ -42,45 +44,46 @@ const projects = [
     description: 'Exploring the future of media in Facebook first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
     Desktimage: 'images/Snapshoot 1.png',
     technologies: ['html', 'css', 'javascript'],
-    live: 'https://fatmahussein.github.io/portfolio/',
-    source: 'https://fatmahussein.github.io/portfolio/',
+    live: 'https://fatmahussein.github.io/My-portfolio/',
+    source: 'https://github.com/fatmahussein/My-portfolio',
     company: 'FACEBOOK',
-    id: '3',
+    id: 'facebook',
   },
   {
     name: 'Uber Navigation',
     description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
     Desktimage: 'images/Snapshoot 2.png',
     technologies: ['html', 'css', 'javascript'],
-    live: 'https://fatmahussein.github.io/portfolio/',
-    source: 'https://fatmahussein.github.io/portfolio/',
+    live: 'https://fatmahussein.github.io/My-portfolio/',
+    source: 'https://github.com/fatmahussein/My-portfolio',
     company: 'UBER',
-    id: '4',
+    id: 'threesixty',
+
   },
   {
     name: 'Tonic',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     Mobimage: 'images/Snapshoot 3.png',
     technologies: ['html', 'css', 'javascript'],
-    live: 'https://fatmahussein.github.io/portfolio/',
-    source: 'https://fatmahussein.github.io/portfolio/',
+    live: 'https://fatmahussein.github.io/My-portfolio/',
+    source: 'https://github.com/fatmahussein/My-portfolio',
     company: 'CANOPY',
-    id: '5',
+    id: 'mob',
   },
   {
     name: 'Multi-Post Stories',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     Mobimage: 'images/Snapshoot 4.png',
     technologies: ['html', 'css', 'javascript'],
-    live: 'https://fatmahussein.github.io/portfolio/',
-    source: 'https://fatmahussein.github.io/portfolio/',
+    live: 'https://fatmahussein.github.io/My-portfolio/',
+    source: 'https://github.com/fatmahussein/My-portfolio',
     company: 'FACEBOOK',
-    id: '6',
+    id: 'multipost',
   },
 
 ];
 
-const projectsContainer = document.querySelector('.grid-item');
+const projectsContainer = document.querySelector('.grid-container');
 for (let i = 0; i < projects.length; i += 1) {
   // Create the card
   const card = document.createElement('div');
@@ -94,7 +97,6 @@ for (let i = 0; i < projects.length; i += 1) {
     image.src = projects[i].Mobimage;
   } else if (window.innerWidth > 768) {
     image.classList.add('desk');
-    image.setAttribute('id', 'desk4');
     image.src = projects[i].Desktimage;
   }
   card.appendChild(image);
@@ -109,12 +111,15 @@ for (let i = 0; i < projects.length; i += 1) {
   leftBlock.appendChild(cardBody);
   // Create the card title
   const cardTitle = document.createElement('h2');
-  cardTitle.setAttribute('id', 'ton', 'faceb', 'br', 'multipost');
-  cardTitle.textContent = projects[i].name;
+  if (projects[i].name === 'Multi-Post Stories' && window.innerWidth < 768) {
+    cardTitle.innerHTML = 'Multi-Post <br>Stories';
+  } else {
+    cardTitle.textContent = projects[i].name;
+  }
   cardBody.appendChild(cardTitle);
   // Create the card list
   const cardList = document.createElement('ul');
-  if (projects[i].id === '1' || projects[i].id === '3' || projects[i].id === '5') {
+  if (projects[i].name === 'Tonic' || projects[i].name === 'Facebook 360') {
     cardList.classList.add('frame2');
   } else {
     cardList.classList.add('frame2-l');
@@ -126,40 +131,58 @@ for (let i = 0; i < projects.length; i += 1) {
   cardList.appendChild(cardText);
   // create h3
   const h3 = document.createElement('h3');
-  h3.textContent = projects[i].company;
-  cardList.appendChild(h3);
+  if (projects[i].name === 'Tonic') {
+    h3.classList.add('canopy');
+    h3.textContent = 'CANOPY';
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth > 768) {
+    h3.classList.add('fb');
+    h3.textContent = 'FACEBOOK';
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth < 768) {
+    h3.classList.add('canopy-l');
+    h3.textContent = 'CANOPY';
+  } else if (projects[i].name === 'Facebook 360') {
+    h3.classList.add('canopy');
+    h3.textContent = 'FACEBOOK';
+    h3.setAttribute('id', 'fs');
+  } else if (projects[i].name === 'Uber Navigation') {
+    h3.textContent = 'Uber';
+    h3.classList.add('canopy');
+  }
+
+  cardText.appendChild(h3);
   // Create the dot
   const dot = document.createElement('li');
   dot.classList.add('dot');
   cardList.appendChild(dot);
   // Create the dev
   const dev = document.createElement('li');
-  if (projects[i].id === '1' || projects[i].id === '6') {
-    cardList.classList.add('role');
-  } else {
-    cardList.classList.add('role1');
+  if (projects[i].id === '1' || projects[i].id === 'multipost') {
+    dev.classList.add('role');
+  } else if (projects) {
+    dev.classList.add('role1');
   }
   cardList.appendChild(dev);
   // h3 text
   const full = document.createElement('h3');
-  if (projects[i].id === '1' || projects[i].id === '2' || projects[i].id === '5' || projects[i].id === '6') {
-    full.classList.add('Back');
-    full.setAttribute('id', 'end');
-  } else {
-    full.classList.add('full');
-    full.setAttribute('id', 'fs');
-  }
   if (projects[i].name === 'Tonic') {
+    full.classList.add('Back');
     full.textContent = 'Back End Dev';
-  } else if (projects[i].name === 'Multi-Post Stories') {
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth > 768) {
+    full.classList.add('Back');
     full.textContent = 'Full Stack Dev';
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth < 768) {
+    full.classList.add('Back');
+    full.textContent = 'Back End Dev';
   } else if (projects[i].name === 'Facebook 360') {
+    full.classList.add('full');
     full.textContent = 'Full Stack Dev';
+    full.setAttribute('id', 'fs');
   } else if (projects[i].name === 'Uber Navigation') {
     full.textContent = 'Lead Developer';
+    full.classList.add('full');
   }
 
-  cardList.appendChild(full);
+  dev.appendChild(full);
   // Create the dot
   const dots = document.createElement('li');
   dots.classList.add('dot');
@@ -176,93 +199,194 @@ for (let i = 0; i < projects.length; i += 1) {
   } else {
     exactyear.textContent = '2015';
   }
-  cardList.appendChild(exactyear);
+  year.appendChild(exactyear);
 
   // Create the card description
   const cardDescription = document.createElement('p');
-  cardDescription.classList.add('text');
+  cardDescription.classList.add('pry-text');
   cardDescription.textContent = projects[i].description;
   cardBody.appendChild(cardDescription);
   // create tags list
   const ul = document.createElement('ul');
-  ul.classList.add('tags');
-  ul.setAttribute('id', 'tg');
+  if (projects[i].name === 'Tonic') {
+    ul.classList.add('tags');
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth < 768) {
+    ul.classList.add('tagsx');
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth > 768) {
+    ul.classList.add('tags-l');
+  } else if (projects[i].name === 'Facebook 360') {
+    ul.classList.add('tags-l');
+  } else if (projects[i].name === 'Uber Navigation') {
+    ul.classList.add('tags-l');
+  }
   cardBody.appendChild(ul);
   // technologies.join(', ');// create li
   const btn1 = document.createElement('li');
-  btn1.classList.add('button1');
-  btn1.setAttribute('id', 'html');
-  btn1.textContent = projects[i].technologies[0];
+  btn1.classList.add('tag1');
   ul.appendChild(btn1);
+  // create a
+  const anchor = document.createElement('a');
+  anchor.classList.add('html');
+  anchor.textContent = 'html';
+  btn1.appendChild(anchor);
   // create li
   const btn2 = document.createElement('li');
-  btn2.classList.add('button2');
-  btn2.setAttribute('id', 'css');
-  btn2.textContent = projects[i].technologies[1];
+  if (projects[i].name === 'Tonic') {
+    btn2.classList.add('tag2');
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth < 768) {
+    btn2.classList.add('tag2');
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth > 768) {
+    btn2.classList.add('tag12');
+  } else if (projects[i].name === 'Facebook 360') {
+    btn2.classList.add('tag12');
+  } else if (projects[i].name === 'Uber Navigation') {
+    btn2.classList.add('tag12');
+  }
   ul.appendChild(btn2);
+  // create anchor
+  const anchor2 = document.createElement('a');
+  if (projects[i].name === 'Tonic') {
+    anchor2.classList.add('css');
+    anchor2.textContent = 'css';
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth < 768) {
+    anchor2.classList.add('css');
+    anchor2.textContent = 'css';
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth > 768) {
+    anchor2.classList.add('ruby');
+    anchor2.textContent = 'Ruby on rails';
+  } else if (projects[i].name === 'Facebook 360') {
+    anchor2.classList.add('ruby');
+    anchor2.textContent = 'Ruby on rails';
+  } else if (projects[i].name === 'Uber Navigation') {
+    anchor2.classList.add('ruby');
+    anchor2.textContent = 'Ruby on rails';
+  }
+  btn2.appendChild(anchor2);
   // create li
   const btn3 = document.createElement('li');
-  btn3.classList.add('button3');
-  btn3.setAttribute('id', 'js');
-  btn3.textContent = projects[i].technologies[2];
+  if (projects[i].name === 'Tonic') {
+    btn3.classList.add('tag3');
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth < 768) {
+    btn3.classList.add('tag3');
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth > 768) {
+    btn3.classList.add('tag2');
+  } else if (projects[i].name === 'Facebook 360') {
+    btn3.classList.add('tag2');
+  } else if (projects[i].name === 'Uber Navigation') {
+    btn3.classList.add('tag2');
+  }
   ul.appendChild(btn3);
+  // create anchor
+  const anchor3 = document.createElement('a');
+  if (projects[i].name === 'Tonic') {
+    anchor3.classList.add('js');
+    anchor3.textContent = 'javascript';
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth < 768) {
+    anchor3.classList.add('js');
+    anchor3.textContent = 'javascript';
+  } else if (projects[i].name === 'Multi-Post Stories' && window.innerWidth > 768) {
+    anchor3.classList.add('css');
+    anchor3.textContent = 'css';
+  } else if (projects[i].name === 'Facebook 360') {
+    anchor3.classList.add('css');
+    anchor3.textContent = 'css';
+  } else if (projects[i].name === 'Uber Navigation') {
+    anchor3.classList.add('css');
+    anchor3.textContent = 'css';
+  }
+  btn3.appendChild(anchor3);
+  // create li
+  const btn4 = document.createElement('li');
+  if (projects[i].name === 'Multi-Post Stories' && window.innerWidth > 768) {
+    btn4.classList.add('tag3');
+  } else if (projects[i].name === 'Facebook 360') {
+    btn4.classList.add('tag3');
+  } else if (projects[i].name === 'Uber Navigation') {
+    btn4.classList.add('tag3');
+  }
+  ul.appendChild(btn4);
+  // create anchor
+  const anchor13 = document.createElement('a');
+  if (projects[i].name === 'Multi-Post Stories' && window.innerWidth > 768) {
+    anchor13.classList.add('js');
+    anchor13.textContent = 'javascript';
+  } else if (projects[i].name === 'Facebook 360') {
+    anchor13.classList.add('js');
+    anchor13.textContent = 'javascript';
+  } else if (projects[i].name === 'Uber Navigation') {
+    anchor13.classList.add('js');
+    anchor13.textContent = 'javascript';
+  }
+  btn4.appendChild(anchor13);
   // create button
-  const proj = document.createElement('div');
-
+  const proj = document.createElement('button');
   if (window.innerWidth < 768) {
-    proj.classList.add('project');
-    const bt = document.createElement('a');
-    bt.classList.add('button');
-    bt.textContent = 'see project';
-    bt.setAttribute('id', 'proj', 'projectz');
-    proj.appendChild(bt);
+    proj.classList.add('see-project');
+    proj.textContent = 'see project';
   } else if (window.innerWidth > 768) {
-    proj.classList.add('project-Desktop');
-    proj.setAttribute('id', 'projectz');
-    const bt = document.createElement('a');
-    bt.classList.add('button');
-    bt.textContent = 'see project';
-    bt.setAttribute('id', 'proj');
-    proj.appendChild(bt);
+    proj.classList.add('project-desktop');
+    proj.textContent = 'see project';
   }
   cardBody.appendChild(proj);
+
   projectsContainer.appendChild(card);
 }
 window.addEventListener('resize', () => this.location.reload());
 
 // modal
-const see = document.querySelectorAll('.project');
+const see = document.querySelectorAll('.see-project');
 see.forEach((btn) => (btn.addEventListener('click', () => {
   const main = document.createElement('div');
   main.className = 'main-pop';
   const popup = document.createElement('div');
   popup.className = 'card-pop';
   popup.innerHTML = `
-  <h5 class="card-title-pop">Tonic<i class="fas fa-times fa-2xs"></i></h5>
-  <ul class="card-list-pop">
-    <li class="card-text">CANOPY</li>
-    <li class="dot"></li>
-    <li class="dev">Back End Dev</li>
-    <li class="dot"></li>
-    <li class="year">2015</li>
-    </ul>
-  <img id="one" class="card-img-pop" src="vectors/snap.png" alt="Tonic project snapshot">
+  <h2 class="card-title-pop">Tonic<i class="fas fa-times fa-2xs"></i></h2>
+  <ul class="frame2" id = 'pop'>
+                            <li class="client">
+                                <h3 class="canopy">CANOPY</h3>
+                            </li>
+                            <li class="dot"></li>
+                            <li class="role">
+                                <h3 class="Back">Back End Dev</h3>
+                            </li>
+                            <li class="dot"></li>
+                            <li class="year-label">
+                                <h3 class="year">2015</h3>
+                            </li>
+                        </ul>
+    <img id= 'pop1' class="snap" src="images/Snapshoot 1.png" ></img>
   <div class="left-block">
-  <div class="card-body">
+  <div class="pt">
               
-      <p class="text-pop">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent</p>
-     <ul class="tags-pop">
-     <li id="html"><a href="#" class="tags button1">html</a></li>
-     <li id="css"><a href="#" class="tags button2">css</a></li>
-     <li id="js"><a href="#" class="tags button3">javascript</a></li>
+      <p id='ptext' class="pry-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent</p>
+     <ul id= 'tagspop'class="tags">
+     <li class="tag1">
+     <a href="#">
+         <p class="html">html</p>
+     </a>
+ </li>
+
+ <li class="tag2">
+     <a href="#">
+         <p class="css">css</p>
+     </a>
+ </li>
+ <li class="tag3">
+     <a href="#">
+         <p class="js">javaScript</p>
+     </a>
+ </li>
      </ul> 
-      <hr id="hr-pop">
-     <div class="project-pop">
-      <a id="proj" href="https://fatmahussein.github.io/portfolio/" class="button" >See live &nbsp;<img src="vectors/Icon.png"></a>
-     </div>
-     <div class="project-pop2">
-      <a id="proj" href="https://github.com/fatmahussein/portfolio" class="button" >See Source &nbsp;<img src="vectors/git.png"></a>
-     </div>
+      <hr class="hr-pop">
+     <button class="see-project" id = 'live'>
+      <a class='livetext' href="https://fatmahussein.github.io/My-portfolio/">See live </a>
+      <img id='livesnap'src="images/live.png">
+     </button>
+     <button class="see-project" id='source'>
+      <a id='srctext' href="https://github.com/fatmahussein/My-portfolio" >See Source </a>
+      <img id='srcsnap' src="images/source.png">
+     </button>
     </div>
 
   </div>
@@ -277,50 +401,59 @@ see.forEach((btn) => (btn.addEventListener('click', () => {
   });
 })));
 
-const open = document.querySelectorAll('.project-Desktop');
+const open = document.querySelectorAll('.project-desktop');
 open.forEach((desktop) => (desktop.addEventListener('click', () => {
   const mains = document.createElement('div');
   mains.className = 'main-pops';
   const dPopup = document.createElement('div');
   dPopup.className = 'card-pops';
   dPopup.innerHTML = `
-  <h5 class="card-title-pops">Tonic<i class="fas fa-times fa-2xs"></i></h5>
-  <ul class="card-list-pops">
-    <li class="card-text">CANOPY</li>
-    <li class="dot"></li>
-    <li class="dev">Back End Dev</li>
-    <li class="dot"></li>
-    <li class="year">2015</li>
-    </ul>
+  <div class = 'containar'>
+  <div class = 'title'> 
+  <h2 class="card-title-pops">Tonic</h2>
+  <i class="fas fa-times fa-3xs"></i> </div>
+  <ul class="frame2" id = 'pops'>
+  <li class="client">
+      <h3 class="canopy">CANOPY</h3>
+  </li>
+  <li class="dot"></li>
+  <li class="role">
+      <h3 class="Back">Back End Dev</h3>
+  </li>
+  <li class="dot"></li>
+  <li class="year-label">
+      <h3 class="year">2015</h3>
+  </li>
+</ul>
   
-  <img id="two" class="card-img-pops" src="vectors/snap20.png" alt="Tonic project snapshot">
+  <img  class="card-img-pops" src="images/pop.png" alt="Tonic project snapshot">
 
-  <div class="left-block">
-  <div class="card-body">
-    <div class="row ">
-      <div class="col-8">
-      <p class="text-pops">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea</p>
+  <div class="left-block" id = 'lblock'>
+  <div class="pt" id = 'ptpop' >
+        <p class="pry-text" id='lorem'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea</p>
+   <div class='rightb'>
+        <ul class="tags-pops">
+      <li class="tag1"><a href="#" class="html" id='color'>HTML</a></li>
+      <li class="tag2"><a href="#" class="css"id='color'>CSS</a></li>
+      <li class="tag3" id='java'><a href="#" class="js" id='color'>Javascript</a></li>
+     </ul>
+    <ul class = 'pop-lang'>
+      <li class="tag12" id = 'rubi'><a href="#" id='color' class="ruby">Ruby</a></li>
+      <li class = 'tag3' id='java'><a href="#" id='color' class="js">Bootstraps</a></li>
+    </ul>
+      <hr id="hr-pop">
+      <div class = 'buttons'>
+      <button class="see-project" id = 'live2'>
+      <a class='livetext' href="https://fatmahussein.github.io/My-portfolio/">See live </a>
+      <img id='livesnap'src="images/live.png">
+     </button>
+     <button class="see-project" id='source2'>
+      <a id='srctext' href="https://github.com/fatmahussein/My-portfolio" >See Source </a>
+      <img id='srcsnap' src="images/source.png">
+     </button
+     </div>
+     </div>
     </div>
-    <div class="col-4">
-    <ul class=" row tags-pops">
-    <div class="row" >
-      <div class="col"><li id="html"><a href="#" class="tags button1">html</a></li></div>
-      <div class="col"><li id="css-pop"><a href="#" class="tags button2">css</a></li></div>
-      <div class="col"> <li id="js-pop"><a href="#" class="tags button3">javascript</a></li></div>
-     </div>
-    <div class="row">
-      <div class="col"><li id="git"><a href="#" class=" button3">github</a></li></div>
-        <div class="col"><li id="ruby"><a href="#" class=" button3">ruby</a></li></div>
-          <div class="col"><li id="bs"><a href="#" class=" button3">Bootstraps</a></li></div>
-    </div>
-     </ul> 
-     <hr id="hr-pop">
-     <div class="project-pop">
-      <a id="projp" href="https://fatmahussein.github.io/portfolio/" class="button" >See live &nbsp;<img src="vectors/Icon.png"></a>
-     </div>
-     <div class="project-pop2">
-      <a id="projp" href="https://github.com/fatmahussein/portfolio" class="button" >See Source &nbsp;<img src="vectors/git.png"></a>
-     </div>
     </div>
     </div>
   </div>
