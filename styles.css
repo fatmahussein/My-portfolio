@@ -1059,6 +1059,7 @@
     color: #fff;
   }
 
+
   .main-pop {
     width: 100%;
     height: 100%;
@@ -1178,6 +1179,22 @@
     font-size: 32px;
     line-height: 44px;
     color: #172b4d;
+    }
+  .error-message {
+    visibility: hidden;
+    position: absolute;
+    width: 60%;
+    color: #c03;
+    background-color: #acb7c3;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px;
+    word-wrap: break-word;
+    float: left;
+    left: 7%;
+    line-height: 20px;
+    text-shadow: 1px 1px rgba(250, 250, 250, 0.3);
   }
 }
 
@@ -1830,6 +1847,7 @@
     }
   }
 
+
   #facebook {
     display: flex;
   }
@@ -2027,4 +2045,9 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .error-message {
+    width: 100%;
+  }
+
 }
