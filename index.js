@@ -449,7 +449,7 @@ open.forEach((desktop) => (desktop.addEventListener('click', () => {
      <button class="see-project" id='source2'>
       <a id='srctext' href="https://github.com/fatmahussein/My-portfolio" >See Source </a>
       <img id='srcsnap' src="images/source.png">
-     </button
+     </button>
      </div>
      </div>
     </div>
