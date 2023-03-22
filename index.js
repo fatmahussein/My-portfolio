@@ -340,6 +340,7 @@ see.forEach((btn) => (btn.addEventListener('click', () => {
   const popup = document.createElement('div');
   popup.className = 'card-pop';
   popup.innerHTML = `
+  <div class = 'containar'>
   <h2 class="card-title-pop">Tonic<i class="fas fa-times fa-2xs"></i></h2>
   <ul class="frame2" id = 'pop'>
                             <li class="client">
@@ -387,7 +388,7 @@ see.forEach((btn) => (btn.addEventListener('click', () => {
       <img id='srcsnap' src="images/source.png">
      </button>
     </div>
-
+  </div>
   </div>
   
   `;

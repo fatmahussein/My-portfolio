@@ -1067,10 +1067,14 @@
     background-color: rgb(0, 0, 0, 30%);
     top: 0%;
     padding-top: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
     display: flex;
     justify-content: center;
+    overflow-y: scroll !important;
+  }
+
+  .containar {
+    width: 100%;
+    height: 100%;
   }
 
   .card-pop {
@@ -1080,27 +1084,24 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
+    height: 700px;
+    margin-bottom: 10%;
     background: #fff;
-    border: 1px solid #dfe1e6;
     border-radius: 16px;
-    overflow-y: scroll !important;
     padding-left: 3%;
     padding-right: 3%;
-    padding-bottom: 20%;
-    padding-top: 50%;
   }
 
   .card-title-pop {
     display: flex;
     gap: 60%;
     width: 295px;
-    height: auto;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 44px;
-    margin-top: -43%;
+    margin-top: 0%;
   }
 
   .fa-times {
@@ -1115,8 +1116,6 @@
     align-items: center;
     padding: 0;
     gap: 12px;
-    margin-top: -15%;
-    margin-left: -18%;
   }
 
   #pop1 {
@@ -1125,7 +1124,7 @@
 
   #ptext {
     height: auto;
-    margin-top: 8%;
+    margin-top: 12%;
   }
 
   #tagspop {
