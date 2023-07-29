@@ -1,6 +1,5 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
-// eslint-disable-next-line linebreak-style
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
@@ -17,12 +16,12 @@ const body = document.querySelector('body');
 const projects = [
   {
     name: 'Tonic',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    Mobimage: 'images/Snapshoot 1.png',
-    Desktimage: 'images/Desksnap.png',
+    description: 'A Green Earth Summit conference website that invites people to the summit  built using HTML, CSS and JavaScript.',
+    Mobimage: 'images/Desk.png',
+    Desktimage: 'images/Desk.png',
     technologies: ['html', 'css', 'javascript'],
-    live: 'https://fatmahussein.github.io/My-portfolio/',
-    source: 'https://github.com/fatmahussein/My-portfolio',
+    live: 'https://fatmahussein.github.io/Green-Earth-Summit/',
+    source: 'https://github.com/fatmahussein/Green-Earth-Summit',
     company: 'CANOPY',
     id: '1',
 
@@ -30,7 +29,7 @@ const projects = [
   {
     name: 'Multi-Post Stories',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    Desktimage: 'images/Desksnap2.png',
+    Desktimage: 'images/todo.png',
     Mobimage: 'images/Snapshoot 2.png',
     technologies: ['html', 'css', 'javascript'],
     live: 'https://fatmahussein.github.io/My-portfolio/',
@@ -69,16 +68,17 @@ const projects = [
     company: 'CANOPY',
     id: 'mob',
   },
-  {
-    name: 'Multi-Post Stories',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    Mobimage: 'images/Snapshoot 4.png',
-    technologies: ['html', 'css', 'javascript'],
-    live: 'https://fatmahussein.github.io/My-portfolio/',
-    source: 'https://github.com/fatmahussein/My-portfolio',
-    company: 'FACEBOOK',
-    id: 'multipost',
-  },
+  // {
+  //   name: 'Multi-Post Stories',
+  //   description: 'A daily selection of privately personalized reads; no accounts
+  //  or sign-ups required.',
+  //   Mobimage: 'images/Snapshoot 4.png',
+  //   technologies: ['html', 'css', 'javascript'],
+  //   live: 'https://fatmahussein.github.io/My-portfolio/',
+  //   source: 'https://github.com/fatmahussein/My-portfolio',
+  //   company: 'FACEBOOK',
+  //   id: 'multipost',
+  // },
 
 ];
 
@@ -333,15 +333,25 @@ for (let i = 0; i < projects.length; i += 1) {
 window.addEventListener('resize', () => this.location.reload());
 
 // modal
-const see = document.querySelectorAll('.see-project');
-see.forEach((btn) => (btn.addEventListener('click', () => {
-  const main = document.createElement('div');
-  main.className = 'main-pop';
-  const popup = document.createElement('div');
-  popup.className = 'card-pop';
+const seeProjectBtn = document.querySelectorAll('.see-project');
+const popup = document.createElement('div');
+popup.classList.add('main-pop');
+
+function modal() {
+  document.body.appendChild(popup);
+  const close = document.querySelector('.fa-times');
+  close.addEventListener('click', () => {
+    body.removeChild(popup);
+  });
+}
+
+const btnpop = document.querySelectorAll('.card button');
+
+for (let i = 0; i < btnpop.length; i += 1) {
   popup.innerHTML = `
+   <div class = 'card-pop' id= 'card${i}'>
   <div class = 'containar'>
-  <h2 class="card-title-pop">Tonic<i class="fas fa-times fa-2xs"></i></h2>
+  <h2 class="card-title-pop">${projects[i].name}<i class="fas fa-times fa-2xs"></i></h2>
   <ul class="frame2" id = 'pop'>
                             <li class="client">
                                 <h3 class="canopy">CANOPY</h3>
@@ -355,7 +365,7 @@ see.forEach((btn) => (btn.addEventListener('click', () => {
                                 <h3 class="year">2015</h3>
                             </li>
                         </ul>
-    <img id= 'pop1' class="snap" src="images/Snapshoot 1.png" ></img>
+    <img id= 'pop1' class="snap" src="${projects[i].Mobimage}" ></img>
   <div class="left-block">
   <div class="pt">
               
@@ -363,45 +373,44 @@ see.forEach((btn) => (btn.addEventListener('click', () => {
      <ul id= 'tagspop'class="tags">
      <li class="tag1">
      <a href="#">
-         <p class="html">html</p>
+         <p class="html">${projects[i].technologies[0]}</p>
      </a>
  </li>
 
  <li class="tag2">
      <a href="#">
-         <p class="css">css</p>
+         <p class="css">${projects[i].technologies[1]}</p>
      </a>
  </li>
  <li class="tag3">
      <a href="#">
-         <p class="js">javaScript</p>
+         <p class="js">${projects[i].technologies[2]}</p>
      </a>
  </li>
      </ul> 
       <hr class="hr-pop">
      <button class="see-project" id = 'live'>
-      <a class='livetext' href="https://fatmahussein.github.io/My-portfolio/">See live </a>
+      <a class='livetext' href="${projects[i].live}">See live </a>
       <img id='livesnap'src="images/live.png">
      </button>
      <button class="see-project" id='source'>
-      <a id='srctext' href="https://github.com/fatmahussein/My-portfolio" >See Source </a>
+      <a id='srctext' href="${projects[i].source}" >See Source </a>
       <img id='srcsnap' src="images/source.png">
      </button>
     </div>
   </div>
   </div>
-  
+  </div>
+ 
   `;
-  main.appendChild(popup);
-  body.appendChild(main);
+}
 
-  const close = document.querySelector('.fa-times');
-  close.addEventListener('click', () => {
-    body.removeChild(main);
-  });
-})));
+seeProjectBtn.forEach((btn) => {
+  btn.addEventListener('click', modal);
+});
 
 const open = document.querySelectorAll('.project-desktop');
+
 open.forEach((desktop) => (desktop.addEventListener('click', () => {
   const mains = document.createElement('div');
   mains.className = 'main-pops';
@@ -426,7 +435,7 @@ open.forEach((desktop) => (desktop.addEventListener('click', () => {
   </li>
 </ul>
   
-  <img  class="card-img-pops" src="images/pop.png" alt="Tonic project snapshot">
+  <img  class="card-img-pops" src="${desktop.Desktimage}" alt="Tonic project snapshot">
 
   <div class="left-block" id = 'lblock'>
   <div class="pt" id = 'ptpop' >

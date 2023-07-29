@@ -1,10 +1,8 @@
 @media only screen and (min-width: 375px) {
   body {
     background-color: #bbb8b5;
-    margin: 0%;
-    width: 100%;
+     width: 100%;
   }
-
   #facebook {
     display: none;
   }
@@ -1201,9 +1199,13 @@
   body {
     background-color: #bbb8b5;
     margin: 0%;
-    width: 100%;
-  }
 
+  }
+html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
   .appbar-compact {
     display: flex;
     width: 100%;
@@ -1499,6 +1501,7 @@
   }
 
   #about-myself {
+    margin-top: 20%;
     flex-direction: row;
     padding-bottom: 20%;
   }
