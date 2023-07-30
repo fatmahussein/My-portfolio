@@ -27,48 +27,25 @@ const projects = [
 
   },
   {
-    name: 'Multi-Post Stories',
+    name: 'Awesome Books',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    Desktimage: 'images/todo.png',
-    Mobimage: 'images/Snapshoot 2.png',
+    Desktimage: 'images/awesome-desktop.png',
+    Mobimage: 'images/awesome-mobile.png',
     technologies: ['html', 'css', 'javascript'],
-    live: 'https://fatmahussein.github.io/My-portfolio/',
-    source: 'https://github.com/fatmahussein/My-portfolio',
+    live: 'https://fatmahussein.github.io/Awesome-books-with-ES6/public/index.html?',
+    source: 'https://github.com/fatmahussein/Awesome-books-with-ES6',
     company: 'FACEBOOK',
   },
-
   {
-    name: 'Facebook 360',
-    description: 'Exploring the future of media in Facebook first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
-    Desktimage: 'images/Snapshoot 1.png',
-    technologies: ['html', 'css', 'javascript'],
-    live: 'https://fatmahussein.github.io/My-portfolio/',
-    source: 'https://github.com/fatmahussein/My-portfolio',
-    company: 'FACEBOOK',
-    id: 'facebook',
-  },
-  {
-    name: 'Uber Navigation',
-    description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-    Desktimage: 'images/Snapshoot 2.png',
-    technologies: ['html', 'css', 'javascript'],
-    live: 'https://fatmahussein.github.io/My-portfolio/',
-    source: 'https://github.com/fatmahussein/My-portfolio',
-    company: 'UBER',
-    id: 'threesixty',
-
-  },
-  {
-    name: 'Tonic',
+    name: 'To do list',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    Mobimage: 'images/Snapshoot 3.png',
+    Desktimage: 'images/todo-desktop.png',
+    Mobimage: 'images/todo-mobile.png',
     technologies: ['html', 'css', 'javascript'],
-    live: 'https://fatmahussein.github.io/My-portfolio/',
-    source: 'https://github.com/fatmahussein/My-portfolio',
-    company: 'CANOPY',
-    id: 'mob',
+    live: 'https://fatmahussein.github.io/To-do-list/dist/index.html',
+    source: 'https://github.com/fatmahussein/To-do-list',
+    company: 'FACEBOOK',
   },
-
 ];
 
 const projectsContainer = document.querySelector('.grid-container');
@@ -84,7 +61,7 @@ for (let i = 0; i < projects.length; i += 1) {
   <div class="card">
   <div>
   <img id="desk" src= "${projects[i].Desktimage}" alt ="" />
-  <img id="mob" src= "${projects[i].Mobimage}" alt ="" />
+  <img id="mob" class="snap" src= "${projects[i].Mobimage}" alt ="" />
   </div>
 
   <div class = "left-block">
@@ -142,7 +119,9 @@ seeProject.forEach((button, i) => {
         </ul>
         <img class="snap" id="mob" src="${projects[i].Mobimage}" ></img>
         <img class="snap" id="desk" src="${projects[i].Desktimage}" ></img>
-        <p id='ptext' class="pry-text">${projects[i].description}</p>
+        <div class="projectInfo">
+        <div class="projectDesc" ><p id='ptext' class="pry-text">${projects[i].description}</p> </div>
+        <div class="projectDet">
         <ul class="frame2" id = 'pop'>${cardDets}</ul>
         <hr class="hr-pop">
         <div class="btns">
@@ -155,6 +134,11 @@ seeProject.forEach((button, i) => {
            <img id='srcsnap' src="images/source.png">
          </button>
          </div>
+        
+        </div>
+        </div>
+     
+     
       </div>
     `;
     body.appendChild(popDiv);
@@ -166,53 +150,3 @@ seeProject.forEach((button, i) => {
     });
   });
 });
-
-// for (let i = 0; i < seeProject.length; i += 1) {
-//   seeProject[i].addEventListener('click', () => {
-//     alert('hallo');
-//     popDiv.style.display = 'block';
-//     let cardDets = '';
-//     for (let j = 0; j < projects[i].technologies.length; j += 1) {
-//       cardDets += `<li class = "tag1">${projects[i].technologies[j]}</li>`;
-//     }
-//     popup.innerHTML = `
-
-//     <div class = 'containar'>
-//     <h2 class="card-title-pop">${projects[i].name}<i class="fas fa-times fa-2xs"></i></h2>
-//     <ul class="frame2" id = 'pop'>
-//                               <li class="client">
-//                                   <h3 class="canopy">CANOPY</h3>
-//                               </li>
-//                               <li class="dot"></li>
-//                               <li class="role">
-//                                   <h3 class="Back">Back End Dev</h3>
-//                               </li>
-//                               <li class="dot"></li>
-//                               <li class="year-label">
-//                                   <h3 class="year">2015</h3>
-//                               </li>
-//                           </ul>
-//       <img id= 'pop1' class="snap" src="${projects[i].Mobimage}" ></img>
-//     <div class="left-block">
-//     <div class="pt">
-
-//         <p id='ptext' class="pry-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent</p>
-//        <ul id= 'tagspop'class="tags">
-//        <li class="tag1">${cardDets}</li></ul>
-//         <hr class="hr-pop">
-//        <button class="see-project" id = 'live'>
-//         <a class='livetext' href="${projects[i].live}">See live </a>
-//         <img id='livesnap'src="images/live.png">
-//        </button>
-//        <button class="see-project" id='source'>
-//         <a id='srctext' href="${projects[i].source}" >See Source </a>
-//         <img id='srcsnap' src="images/source.png">
-//        </button>
-//       </div>
-//     </div>
-//     </div>
-
-//     `;
-//     popDiv.appendChild(popup);
-//   });
-// }
