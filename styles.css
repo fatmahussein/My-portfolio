@@ -1,8 +1,9 @@
-@media only screen and (min-width: 375px) {
+
   body {
     background-color: #bbb8b5;
      width: 100%;
-  }
+    }
+
   #facebook {
     display: none;
   }
@@ -234,9 +235,9 @@
   }
 
   .snap {
-    width: 295px;
-    height: 220px;
+    width: 330px;
     border-radius: 8px;
+    object-fit: cover;
   }
 
   #faceb {
@@ -482,6 +483,10 @@
     line-height: 16px;
     letter-spacing: 0.03em;
     color: #6409e4;
+  }
+  .btns{
+    display: flex;
+    gap: 15px;
   }
 
   .see-project {
@@ -886,6 +891,7 @@
     background-position: 98% 20%;
     background-size: contain;
     background-repeat: no-repeat;
+    overflow: hidden;
   }
 
   .contain {
@@ -1070,26 +1076,24 @@
     overflow-y: scroll !important;
   }
 
-  .containar {
-    width: 100%;
-    height: 100%;
-  }
-
-  .card-pop {
-    box-sizing: border-box;
+ .card-pop {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 80%;
     gap: 12px;
-    height: 700px;
+    height: 750px;
+    padding-bottom: 10%;
     margin-bottom: 10%;
     background: #fff;
     border-radius: 16px;
-    padding-left: 3%;
-    padding-right: 3%;
   }
-
+.headcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
   .card-title-pop {
     display: flex;
     gap: 60%;
@@ -1114,6 +1118,7 @@
     align-items: center;
     padding: 0;
     gap: 12px;
+    margin-top: 10px;
   }
 
   #pop1 {
@@ -1122,7 +1127,9 @@
 
   #ptext {
     height: auto;
-    margin-top: 12%;
+    margin-top: 5px;
+    /* text-align: center; */
+    /* text-wrap: balance; */
   }
 
   #tagspop {
@@ -1137,14 +1144,13 @@
   }
 
   #live {
-    margin-top: 3%;
+
     font-size: 14px;
     color: #396df2;
   }
 
   #source {
-    margin-left: 50%;
-    margin-top: -16%;
+ 
     font-size: 13px;
     color: #396df2;
   }
@@ -1193,7 +1199,7 @@
     line-height: 20px;
     text-shadow: 1px 1px rgba(250, 250, 250, 0.3);
   }
-}
+
 
 @media only screen and (min-width: 768px) {
   body {
@@ -1338,12 +1344,11 @@ html{
 
   #desk {
     display: block;
-    width: 50%;
-    height: 112%;
+    width: 88%;
+    height: 69%;
     justify-content: center;
     border-radius: 8px;
-    margin-bottom: -37px;
-  }
+    }
 
   .pt {
     margin-top: 0%;
@@ -1865,18 +1870,19 @@ html{
     overflow-y: scroll !important;
   }
 
-  .card-pops {
-    box-sizing: border-box;
+  .card-pop{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 80%;
     gap: 12px;
-    width: 85%;
-    height: 1110px;
-    margin-bottom: 16%;
-    background: #ffff;
-    border: 1px solid #dfe1e6;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 710px;
+    padding-bottom: 30%;
+    margin-bottom: 10%;
+    background: #fff;
     border-radius: 16px;
   }
 

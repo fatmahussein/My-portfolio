@@ -15,10 +15,10 @@ document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click'
 
 const projects = [
   {
-    name: 'Tonic',
+    name: 'Green Earth ',
     description: 'A Green Earth Summit conference website that invites people to the summit  built using HTML, CSS and JavaScript.',
-    Mobimage: 'images/Desk.png',
-    Desktimage: 'images/Desk.png',
+    Mobimage: 'images/GE.png',
+    Desktimage: 'images/GEDesk.png',
     technologies: ['html', 'css', 'javascript'],
     live: 'https://fatmahussein.github.io/Green-Earth-Summit/',
     source: 'https://github.com/fatmahussein/Green-Earth-Summit',
@@ -107,58 +107,112 @@ for (let i = 0; i < projects.length; i += 1) {
   `;
   projectsContainer.appendChild(card);
 }
-
-const seeProject = document.querySelector('.see-project');
+const body = document.querySelector('body');
+const seeProject = document.querySelectorAll('.see-project');
 const popDiv = document.querySelector('.popup');
-const popup = document.createElement('div');
-for (let i = 0; i < seeProject.length; i += 1) {
-  seeProject[i].addEventListener('click', () => {
-    alert('hallo')
-    popDiv.style.display = 'block';
+
+seeProject.forEach((button, i) => {
+  button.addEventListener('click', () => {
     let cardDets = '';
     for (let j = 0; j < projects[i].technologies.length; j += 1) {
       cardDets += `<li class = "tag1">${projects[i].technologies[j]}</li>`;
     }
-    popup.innerHTML = `
-  
-    <div class = 'containar'>
-    <h2 class="card-title-pop">${projects[i].name}<i class="fas fa-times fa-2xs"></i></h2>
-    <ul class="frame2" id = 'pop'>
-                              <li class="client">
-                                  <h3 class="canopy">CANOPY</h3>
-                              </li>
-                              <li class="dot"></li>
-                              <li class="role">
-                                  <h3 class="Back">Back End Dev</h3>
-                              </li>
-                              <li class="dot"></li>
-                              <li class="year-label">
-                                  <h3 class="year">2015</h3>
-                              </li>
-                          </ul>
-      <img id= 'pop1' class="snap" src="${projects[i].Mobimage}" ></img>
-    <div class="left-block">
-    <div class="pt">
-                
-        <p id='ptext' class="pry-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent</p>
-       <ul id= 'tagspop'class="tags">
-       <li class="tag1">${cardDets}</li></ul> 
-        <hr class="hr-pop">
-       <button class="see-project" id = 'live'>
-        <a class='livetext' href="${projects[i].live}">See live </a>
-        <img id='livesnap'src="images/live.png">
-       </button>
-       <button class="see-project" id='source'>
-        <a id='srctext' href="${projects[i].source}" >See Source </a>
-        <img id='srcsnap' src="images/source.png">
-       </button>
-      </div>
-    </div>
-    </div>
-
-  
-    
-    `;
+    const popup = document.createElement('div');
+    popDiv.classList.add('main-pop');
     popDiv.appendChild(popup);
+    popup.classList.add('card-pop');
+    popup.innerHTML = `
+      <div>
+      <div class="headcontainer">
+      <h2>${projects[i].name}</h2>
+      <button class="popup-close"><i class="fas fa-times"></i></button>
+      </div>
+        <ul class="frame2" id = 'pop'>
+           <li class="client">
+              <h3 class="canopy">${projects[i].company}</h3>
+           </li>
+           <li class="dot"></li>
+           <li class="role">
+           <h3 class="Back">Back End Dev</h3>
+          </li>
+          <li class="dot"></li>
+          <li class="year-label">
+          <h3 class="year">2015</h3>
+          </li>
+        </ul>
+        <img class="snap" id="mob" src="${projects[i].Mobimage}" ></img>
+        <img class="snap" id="desk" src="${projects[i].Desktimage}" ></img>
+        <p id='ptext' class="pry-text">${projects[i].description}</p>
+        <ul class="frame2" id = 'pop'>${cardDets}</ul>
+        <hr class="hr-pop">
+        <div class="btns">
+         <button class="see-project" id = 'live'>
+           <a class='livetext' href="${projects[i].live}">See live </a>
+           <img id='livesnap'src="images/live.png">
+         </button>
+         <button class="see-project" id='source'>
+           <a id='srctext' href="${projects[i].source}" >See Source </a>
+           <img id='srcsnap' src="images/source.png">
+         </button>
+         </div>
+      </div>
+    `;
+    body.appendChild(popDiv);
+
+    const closeButton = popup.querySelector('.popup-close');
+    closeButton.addEventListener('click', () => {
+      popDiv.removeChild(popup);
+      body.removeChild(popDiv);
+    });
   });
-}
+});
+
+// for (let i = 0; i < seeProject.length; i += 1) {
+//   seeProject[i].addEventListener('click', () => {
+//     alert('hallo');
+//     popDiv.style.display = 'block';
+//     let cardDets = '';
+//     for (let j = 0; j < projects[i].technologies.length; j += 1) {
+//       cardDets += `<li class = "tag1">${projects[i].technologies[j]}</li>`;
+//     }
+//     popup.innerHTML = `
+
+//     <div class = 'containar'>
+//     <h2 class="card-title-pop">${projects[i].name}<i class="fas fa-times fa-2xs"></i></h2>
+//     <ul class="frame2" id = 'pop'>
+//                               <li class="client">
+//                                   <h3 class="canopy">CANOPY</h3>
+//                               </li>
+//                               <li class="dot"></li>
+//                               <li class="role">
+//                                   <h3 class="Back">Back End Dev</h3>
+//                               </li>
+//                               <li class="dot"></li>
+//                               <li class="year-label">
+//                                   <h3 class="year">2015</h3>
+//                               </li>
+//                           </ul>
+//       <img id= 'pop1' class="snap" src="${projects[i].Mobimage}" ></img>
+//     <div class="left-block">
+//     <div class="pt">
+
+//         <p id='ptext' class="pry-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent</p>
+//        <ul id= 'tagspop'class="tags">
+//        <li class="tag1">${cardDets}</li></ul>
+//         <hr class="hr-pop">
+//        <button class="see-project" id = 'live'>
+//         <a class='livetext' href="${projects[i].live}">See live </a>
+//         <img id='livesnap'src="images/live.png">
+//        </button>
+//        <button class="see-project" id='source'>
+//         <a id='srctext' href="${projects[i].source}" >See Source </a>
+//         <img id='srcsnap' src="images/source.png">
+//        </button>
+//       </div>
+//     </div>
+//     </div>
+
+//     `;
+//     popDiv.appendChild(popup);
+//   });
+// }
